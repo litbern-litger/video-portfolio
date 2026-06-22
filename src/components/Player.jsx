@@ -39,11 +39,15 @@ export default function Player({
   onAspect,
 }) {
   const videoRef = useRef(null);
-  // Stable per source so the load effect doesn't re-run on every render.
+  // Stable per source so the effects don't re-run on every render.
   const resolved = useMemo(() => resolveSource(source), [source]);
   const [fallback, setFallback] = useState(false);
 
-  // Keep latest aspect without making it a load-effect dependency.
+  const isHls =
+    resolved?.mode === "video" &&
+    (resolved.kind === "hls" || resolved.url.endsWith(".m3u8"));
+
+  // Keep latest aspect without making it an effect dependency.
   const aspectRef = useRef(aspect);
   aspectRef.current = aspect;
   const didFullscreen = useRef(false);
@@ -53,32 +57,27 @@ export default function Player({
     didFullscreen.current = false;
   }, [resolved]);
 
+  // HLS needs JS attach where the browser can't play .m3u8 natively.
+  useEffect(() => {
+    if (!isHls || fallback) return;
+    const video = videoRef.current;
+    if (!video || video.canPlayType("application/vnd.apple.mpegurl")) return;
+    if (!Hls.isSupported()) return;
+    const hls = new Hls({ enableWorker: true });
+    hls.loadSource(resolved.url);
+    hls.attachMedia(video);
+    return () => hls.destroy();
+  }, [resolved, isHls, fallback]);
+
+  // Best-effort: open straight into fullscreen, once, on touch devices.
   useEffect(() => {
     if (!resolved || resolved.mode !== "video" || fallback) return;
+    if (!autoFullscreen || didFullscreen.current) return;
     const video = videoRef.current;
     if (!video) return;
-
-    let hls;
-    const isHls = resolved.kind === "hls" || resolved.url.endsWith(".m3u8");
-    if (isHls && !video.canPlayType("application/vnd.apple.mpegurl") && Hls.isSupported()) {
-      hls = new Hls({ enableWorker: true });
-      hls.loadSource(resolved.url);
-      hls.attachMedia(video);
-    } else {
-      video.src = resolved.url;
-    }
-
-    // Best-effort: open straight into fullscreen, once, on touch devices.
-    let raf;
-    if (autoFullscreen && !didFullscreen.current) {
-      didFullscreen.current = true;
-      raf = requestAnimationFrame(() => goFullscreen(video, aspectRef.current));
-    }
-
-    return () => {
-      if (hls) hls.destroy();
-      if (raf) cancelAnimationFrame(raf);
-    };
+    didFullscreen.current = true;
+    const raf = requestAnimationFrame(() => goFullscreen(video, aspectRef.current));
+    return () => cancelAnimationFrame(raf);
   }, [resolved, fallback, autoFullscreen]);
 
   if (!resolved) return null;
@@ -101,10 +100,12 @@ export default function Player({
     <div data-fs-target className="group/player relative h-full w-full bg-black">
       <video
         ref={videoRef}
+        src={isHls ? undefined : resolved.url}
         poster={poster}
         controls
         autoPlay={autoPlay}
         playsInline
+        preload="auto"
         className="h-full w-full bg-black object-contain"
         onLoadedMetadata={(e) => {
           const v = e.currentTarget;
