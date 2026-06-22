@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Hls from "hls.js";
 import { resolveSource } from "../lib/sources.js";
 
@@ -24,7 +24,7 @@ function goFullscreen(video, aspect) {
   const target = video.closest("[data-fs-target]") || video;
   const req = target.requestFullscreen || target.webkitRequestFullscreen;
   if (req) {
-    return Promise.resolve(req.call(target)).then(lock).catch(lock);
+    Promise.resolve(req.call(target)).then(lock).catch(lock);
   } else if (video.webkitEnterFullscreen) {
     video.webkitEnterFullscreen();
   }
@@ -36,14 +36,22 @@ export default function Player({
   aspect = 16 / 9,
   autoPlay = true,
   autoFullscreen = false,
+  onAspect,
 }) {
   const videoRef = useRef(null);
-  const resolved = resolveSource(source);
+  // Stable per source so the load effect doesn't re-run on every render.
+  const resolved = useMemo(() => resolveSource(source), [source]);
   const [fallback, setFallback] = useState(false);
+
+  // Keep latest aspect without making it a load-effect dependency.
+  const aspectRef = useRef(aspect);
+  aspectRef.current = aspect;
+  const didFullscreen = useRef(false);
 
   useEffect(() => {
     setFallback(false);
-  }, [source]);
+    didFullscreen.current = false;
+  }, [resolved]);
 
   useEffect(() => {
     if (!resolved || resolved.mode !== "video" || fallback) return;
@@ -60,18 +68,18 @@ export default function Player({
       video.src = resolved.url;
     }
 
-    // Best-effort: open straight into fullscreen (works where the browser still
-    // honors the click that opened the player). The button is the reliable path.
+    // Best-effort: open straight into fullscreen, once, on touch devices.
     let raf;
-    if (autoFullscreen) {
-      raf = requestAnimationFrame(() => goFullscreen(video, aspect));
+    if (autoFullscreen && !didFullscreen.current) {
+      didFullscreen.current = true;
+      raf = requestAnimationFrame(() => goFullscreen(video, aspectRef.current));
     }
 
     return () => {
       if (hls) hls.destroy();
       if (raf) cancelAnimationFrame(raf);
     };
-  }, [resolved, fallback, autoFullscreen, aspect]);
+  }, [resolved, fallback, autoFullscreen]);
 
   if (!resolved) return null;
 
@@ -98,11 +106,17 @@ export default function Player({
         autoPlay={autoPlay}
         playsInline
         className="h-full w-full bg-black object-contain"
+        onLoadedMetadata={(e) => {
+          const v = e.currentTarget;
+          if (v.videoWidth && v.videoHeight && onAspect) {
+            onAspect(v.videoWidth / v.videoHeight);
+          }
+        }}
         onError={() => resolved.fallbackIframe && setFallback(true)}
       />
       <button
         type="button"
-        onClick={() => goFullscreen(videoRef.current, aspect)}
+        onClick={() => goFullscreen(videoRef.current, aspectRef.current)}
         aria-label="Fullscreen"
         className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-sm font-600 text-white backdrop-blur transition hover:bg-black/80"
       >
