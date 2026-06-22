@@ -300,10 +300,10 @@
       "category": "launched-features",
       "date": "2026-05",
       "orientation": "landscape",
-      "aspect": "1914/908",
+      "aspect": "16/9",
       "thumbnail": "/thumbs/screen-recording.jpg",
       "sources": {
-        "en": { "type": "mp4", "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/screen+recording+for+idan.mp4" }
+        "en": { "type": "mp4", "url": "/videos/screen-recording.mp4" }
       }
     },
     {
