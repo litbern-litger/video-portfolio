@@ -100,6 +100,11 @@ export default function VideoModal({ video, category, onClose }) {
             source={video.sources[lang]}
             poster={video.thumbnail}
             aspect={ar}
+            autoFullscreen={
+              typeof window !== "undefined" &&
+              window.matchMedia &&
+              window.matchMedia("(pointer: coarse)").matches
+            }
           />
         </div>
       </div>

@@ -1,11 +1,11 @@
 // Resolves a video source into something the player can render.
 //
-// Google Drive files play through Drive's own /preview embed: it streams
-// reliably, has a real play button, and rotates in fullscreen on mobile.
-// (Trying to play Drive's "direct download" URL natively is unreliable —
-// it returns audio-only / interstitial pages for most files.)
+// Google Drive files play in a native <video> via the direct content URL with
+// `confirm=t` — this serves real video/mp4 with range support, so we get our
+// own controls, true fullscreen + auto-rotate, and no Google pop-out button or
+// account picker. The /preview embed is kept only as a last-resort fallback.
 //
-// Real mp4/hls files (e.g. our S3-hosted clips) play in a native <video>.
+// Real mp4/hls files (e.g. our S3-hosted clips) play in a native <video> too.
 
 export function extractDriveId(url) {
   if (!url) return null;
@@ -14,6 +14,10 @@ export function extractDriveId(url) {
   m = url.match(/[?&]id=([^&]+)/);
   if (m) return m[1];
   return null;
+}
+
+export function driveDirectUrl(id) {
+  return `https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t`;
 }
 
 export function drivePreviewUrl(id) {
@@ -28,10 +32,17 @@ export function resolveSource(source) {
     return { mode: "video", url, kind: type };
   }
 
-  // Drive (or any iframe-style embed) → use the embed player directly.
   if (type === "iframe") {
     const id = url && url.includes("drive.google.com") ? extractDriveId(url) : null;
-    return { mode: "iframe", url: id ? drivePreviewUrl(id) : url };
+    if (id) {
+      return {
+        mode: "video",
+        kind: "mp4",
+        url: driveDirectUrl(id),
+        fallbackIframe: drivePreviewUrl(id),
+      };
+    }
+    return { mode: "iframe", url };
   }
 
   return { mode: "iframe", url };
