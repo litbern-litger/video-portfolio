@@ -3,7 +3,6 @@ import data from "./data/portfolio.json";
 import { computeStats, countByCategory } from "./lib/stats.js";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
-import StatsCards from "./components/StatsCards.jsx";
 import CategoryChips from "./components/CategoryChips.jsx";
 import VideoGrid from "./components/VideoGrid.jsx";
 import VideoModal from "./components/VideoModal.jsx";
@@ -36,14 +35,10 @@ export default function App() {
       <div className="pointer-events-none absolute -right-20 top-96 h-80 w-80 animate-float rounded-full bg-teal/20 blur-3xl" />
 
       <Header name={profile.name} />
-      <Hero profile={profile} />
+      <Hero profile={profile} stats={stats} />
 
       <main className="relative mx-auto max-w-6xl px-5 pb-24">
-        <section className="mt-2">
-          <StatsCards stats={stats} />
-        </section>
-
-        <section id="categories" className="mt-10">
+        <section id="categories" className="mt-12">
           <CategoryChips
             categories={categories}
             counts={counts}

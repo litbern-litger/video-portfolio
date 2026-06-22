@@ -85,6 +85,7 @@
       "id": "what-are-chips-dummies",
       "title": "What Are Chips — For Dummies",
       "category": "ld-explainers",
+      "date": "2026-05",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1rCsCXHyuv1VCG4eka4giw-OfWcD5d_Zj&sz=w640",
       "sources": {
@@ -96,6 +97,7 @@
       "title": "About Chips for First Grade Kids",
       "titleHe": "מה הוא שבב? לילדים",
       "category": "ld-children",
+      "date": "2026-05",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=18Zu92T3oJ71hB5nN5hKCusdF1a7fnTLR&sz=w640",
       "sources": {
@@ -106,6 +108,7 @@
       "id": "the-sloth",
       "title": "The Sloth",
       "category": "ld-explainers",
+      "date": "2026-06",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=19p03AJhiTgk5ztsSvi704Aw1_2K8zSHE&sz=w640",
       "sources": {
@@ -117,6 +120,7 @@
       "title": "First Grade Heroes — Transition from Kindergarten",
       "titleHe": "גיבורי כתה א - הכנה לכתה א",
       "category": "ld-children",
+      "date": "2026-06",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=10imv4pNuYqk27yiiGQXPoOxJsL5FgKlU&sz=w640",
       "sources": {
@@ -128,6 +132,7 @@
       "title": "AI Videos — Promo for a First Grade Lesson",
       "titleHe": "סרטוני AI מה הם - לילדים",
       "category": "ld-children",
+      "date": "2026-06",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1HLh4hZJ_8ufZVL6ZTCBFuv5Al-GxfYkU&sz=w640",
       "sources": {
@@ -139,6 +144,7 @@
       "title": "Welcome to Your New First Laptop — Personalized",
       "titleHe": "ברוך/ה הבא/ה למחשב הראשון שלך",
       "category": "ld-personalization",
+      "date": "2026-06",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1JyC8yEs4Qz0B_vazSxJdyylcPEi0UjWv&sz=w640",
       "sources": {
@@ -149,6 +155,7 @@
       "id": "brush-your-teeth",
       "title": "Brush Your Teeth Twice a Day",
       "category": "ld-children",
+      "date": "2026-01",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1T340Vp6Iincgg8umHOZEgmh0OPxMur8I&sz=w640",
       "sources": {
@@ -159,7 +166,9 @@
       "id": "mighter-ai-ad",
       "title": "Mighter AI — LinkedIn Ad",
       "category": "tech-promo",
+      "date": "2026-03",
       "orientation": "portrait",
+      "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=1nvtMX_2JsctswBnnayItSwKEtG_Rc59R&sz=w640",
       "sources": {
         "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1nvtMX_2JsctswBnnayItSwKEtG_Rc59R/preview" }
@@ -169,7 +178,9 @@
       "id": "happier-living-therapy",
       "title": "Happier Living — Get Real Therapy (LinkedIn Ad)",
       "category": "tech-promo",
+      "date": "2026-03",
       "orientation": "portrait",
+      "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=1knV-6gNLY4xd-ChvwFTKzZUJ2gLBsV7P&sz=w640",
       "sources": {
         "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1knV-6gNLY4xd-ChvwFTKzZUJ2gLBsV7P/preview" }
@@ -179,7 +190,9 @@
       "id": "happier-living-shopping",
       "title": "Happier Living — Shopping Won't Heal You (LinkedIn Ad)",
       "category": "tech-promo",
+      "date": "2026-03",
       "orientation": "portrait",
+      "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=1fULEP5PsHF7dsCjxve3j9Lsu10Vux447&sz=w640",
       "sources": {
         "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1fULEP5PsHF7dsCjxve3j9Lsu10Vux447/preview" }
@@ -189,7 +202,9 @@
       "id": "birdie-cx-ad",
       "title": "Birdie — Product for CX (LinkedIn Ad)",
       "category": "tech-promo",
+      "date": "2026-03",
       "orientation": "portrait",
+      "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=10CkC0JZGQPbBaGGReqfPnpWSXY7NZm7e&sz=w640",
       "sources": {
         "en": { "type": "iframe", "url": "https://drive.google.com/file/d/10CkC0JZGQPbBaGGReqfPnpWSXY7NZm7e/preview" }
@@ -199,7 +214,9 @@
       "id": "tres-finance-ad",
       "title": "Tres Finance — Crypto Accounting (LinkedIn Ad)",
       "category": "tech-promo",
+      "date": "2026-05",
       "orientation": "portrait",
+      "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=1IMJBqFt3bo7zi3Gy7QZcQNoTbezVRtUs&sz=w640",
       "sources": {
         "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1IMJBqFt3bo7zi3Gy7QZcQNoTbezVRtUs/preview" }
@@ -209,7 +226,9 @@
       "id": "tres-finance-sst-ad",
       "title": "Tres Finance — Single Source of Truth (LinkedIn Ad)",
       "category": "tech-promo",
+      "date": "2026-05",
       "orientation": "portrait",
+      "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=14vNe87mwPo_I_UE11NLPoJv8VYq-Eapw&sz=w640",
       "sources": {
         "en": { "type": "iframe", "url": "https://drive.google.com/file/d/14vNe87mwPo_I_UE11NLPoJv8VYq-Eapw/preview" }
@@ -219,7 +238,9 @@
       "id": "user-gems-sdr-ad",
       "title": "User Gems — SDR Agent (LinkedIn Ad)",
       "category": "tech-promo",
+      "date": "2026-05",
       "orientation": "portrait",
+      "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=18UKr6DA9E-Se12hrqorRqmgUHdKxRWOL&sz=w640",
       "sources": {
         "en": { "type": "iframe", "url": "https://drive.google.com/file/d/18UKr6DA9E-Se12hrqorRqmgUHdKxRWOL/preview" }
@@ -230,6 +251,7 @@
       "title": "מאיה בת שש",
       "titleHe": "מאיה בת שש",
       "category": "personal",
+      "date": "2026-06",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1dq3tVRZguJqY73aSY872J6a76TKw_7xm&sz=w640",
       "sources": {
@@ -241,6 +263,7 @@
       "title": "לני בת שלוש",
       "titleHe": "לני בת שלוש",
       "category": "personal",
+      "date": "2023-02",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=132HBpZvLbs4-cyAuBXT6o7H7BxRw0nGc&sz=w640",
       "sources": {
@@ -251,6 +274,7 @@
       "id": "brand-dna",
       "title": "Brand DNA",
       "category": "launched-features",
+      "date": "2026-01",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=17PtEhYAd4SU9YPpvxqS_lj2rY_tjXunY&sz=w640",
       "sources": {
@@ -261,6 +285,7 @@
       "id": "video-evaluation",
       "title": "Video Evaluation",
       "category": "launched-features",
+      "date": "2026-01",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1pHUpUcXyMEZkPq9vxy6r95nE-XXavu6i&sz=w640",
       "sources": {
@@ -271,7 +296,9 @@
       "id": "screen-recording-production",
       "title": "Screen Recording to Production-Ready Video",
       "category": "launched-features",
+      "date": "2026-05",
       "orientation": "landscape",
+      "aspect": "1914/908",
       "thumbnail": "/thumbs/screen-recording.jpg",
       "sources": {
         "en": { "type": "mp4", "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/screen+recording+for+idan.mp4" }
@@ -282,7 +309,8 @@
       "title": "Shavuot — Short Explanation for Kids",
       "titleHe": "מאין חג השבועות לילדים",
       "category": "ld-children",
-      "orientation": "landscape",
+      "date": "2026-05",
+      "orientation": "portrait",
       "thumbnail": "https://drive.google.com/thumbnail?id=1MJBWNG75tdv6rFJMXoorn37rW4muVj_L&sz=w640",
       "sources": {
         "he": { "type": "iframe", "url": "https://drive.google.com/file/d/1MJBWNG75tdv6rFJMXoorn37rW4muVj_L/preview" }

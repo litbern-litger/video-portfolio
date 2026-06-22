@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Player from "./Player.jsx";
+import { getAspect } from "../lib/aspect.js";
 
 export default function VideoModal({ video, category, onClose }) {
   const langs = video ? Object.keys(video.sources) : [];
@@ -21,7 +22,7 @@ export default function VideoModal({ video, category, onClose }) {
 
   if (!video) return null;
 
-  const isPortrait = video.orientation === "portrait";
+  const ar = getAspect(video);
   const hasBoth = langs.length > 1;
   const isHe = lang === "he";
   const title = isHe && video.titleHe ? video.titleHe : video.title;
@@ -72,15 +73,18 @@ export default function VideoModal({ video, category, onClose }) {
         </div>
 
         <div
-          className={`mx-auto w-full overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/10 ${
-            isPortrait ? "aspect-[9/16] max-h-[78vh]" : "aspect-video"
-          }`}
-          style={isPortrait ? { maxWidth: "min(100%, 44vh)" } : undefined}
+          className="mx-auto w-full overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10"
+          style={{
+            aspectRatio: String(ar),
+            maxWidth: `calc(${ar} * 80vh)`,
+            maxHeight: "80vh",
+          }}
         >
           <Player
             key={`${video.id}-${lang}`}
             source={video.sources[lang]}
             poster={video.thumbnail}
+            aspect={ar}
           />
         </div>
       </div>

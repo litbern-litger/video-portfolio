@@ -1,5 +1,7 @@
+import { getAspect } from "../lib/aspect.js";
+
 export default function VideoCard({ video, category, onOpen }) {
-  const isPortrait = video.orientation === "portrait";
+  const ar = getAspect(video);
   const bilingual = Object.keys(video.sources).length > 1;
   const color = category?.color || "#8b5cf6";
 
@@ -9,7 +11,7 @@ export default function VideoCard({ video, category, onOpen }) {
       className="group mb-5 block w-full break-inside-avoid overflow-hidden rounded-3xl bg-white text-left shadow-[0_8px_30px_rgba(31,18,53,0.08)] ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(31,18,53,0.18)]"
       style={{ borderTop: `4px solid ${color}` }}
     >
-      <div className={`relative overflow-hidden ${isPortrait ? "aspect-[9/16]" : "aspect-video"}`}>
+      <div className="relative overflow-hidden" style={{ aspectRatio: String(ar) }}>
         <img
           src={video.thumbnail}
           alt={video.title}
