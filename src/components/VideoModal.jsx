@@ -5,9 +5,25 @@ import { getAspect } from "../lib/aspect.js";
 export default function VideoModal({ video, category, onClose }) {
   const langs = video ? Object.keys(video.sources) : [];
   const [lang, setLang] = useState(langs[0] || "en");
+  const [ar, setAr] = useState(() => getAspect(video));
 
   useEffect(() => {
     if (video) setLang(Object.keys(video.sources)[0]);
+  }, [video]);
+
+  // Match the player frame to the video's true shape so the control bar sits
+  // at the bottom (not floating mid-frame). The thumbnail shares the video's
+  // aspect ratio, so we read it from the image and fall back to declared.
+  useEffect(() => {
+    if (!video) return;
+    setAr(getAspect(video));
+    if (!video.thumbnail) return;
+    const img = new Image();
+    img.onload = () => {
+      const ratio = img.naturalWidth / img.naturalHeight;
+      if (ratio > 0.2 && ratio < 5) setAr(ratio);
+    };
+    img.src = video.thumbnail;
   }, [video]);
 
   useEffect(() => {
@@ -22,7 +38,6 @@ export default function VideoModal({ video, category, onClose }) {
 
   if (!video) return null;
 
-  const ar = getAspect(video);
   const hasBoth = langs.length > 1;
   const isHe = lang === "he";
   const title = isHe && video.titleHe ? video.titleHe : video.title;

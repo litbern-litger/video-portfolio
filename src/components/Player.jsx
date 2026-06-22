@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Hls from "hls.js";
 import { resolveSource } from "../lib/sources.js";
 
@@ -16,7 +16,6 @@ function goFullscreen(video, aspect) {
     }
   };
 
-  // iOS Safari: native video fullscreen auto-rotates with the device.
   if (video.webkitEnterFullscreen && !document.fullscreenEnabled) {
     video.webkitEnterFullscreen();
     return;
@@ -34,14 +33,9 @@ function goFullscreen(video, aspect) {
 export default function Player({ source, poster, aspect = 16 / 9, autoPlay = true }) {
   const videoRef = useRef(null);
   const resolved = resolveSource(source);
-  const [fallback, setFallback] = useState(false);
 
   useEffect(() => {
-    setFallback(false);
-  }, [source]);
-
-  useEffect(() => {
-    if (!resolved || resolved.mode !== "video" || fallback) return;
+    if (!resolved || resolved.mode !== "video") return;
     const video = videoRef.current;
     if (!video) return;
 
@@ -58,18 +52,16 @@ export default function Player({ source, poster, aspect = 16 / 9, autoPlay = tru
     return () => {
       if (hls) hls.destroy();
     };
-  }, [resolved, fallback]);
+  }, [resolved]);
 
   if (!resolved) return null;
 
-  const showIframe = resolved.mode === "iframe" || fallback;
-  if (showIframe) {
-    const url = fallback ? resolved.fallbackIframe : resolved.url;
+  if (resolved.mode === "iframe") {
     return (
       <iframe
         title="video"
-        src={url}
-        className="h-full w-full"
+        src={resolved.url}
+        className="h-full w-full border-0"
         allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
         allowFullScreen
       />
@@ -83,8 +75,8 @@ export default function Player({ source, poster, aspect = 16 / 9, autoPlay = tru
         poster={poster}
         controls
         autoPlay={autoPlay}
-        className="h-full w-full bg-black"
-        onError={() => resolved.fallbackIframe && setFallback(true)}
+        playsInline
+        className="h-full w-full bg-black object-contain"
       />
       <button
         type="button"

@@ -16,23 +16,13 @@
   ],
   "videos": [
     {
-      "id": "amazon-lucas-mcp-abm",
-      "title": "Amazon Quick with Lucas MCP — Accelerate ABM",
-      "category": "tech-promo",
-      "date": "2026-06",
-      "orientation": "landscape",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1WrKfpa7CCW8H8Cniq-rWiTIACgyO60Tf&sz=w640",
-      "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1WrKfpa7CCW8H8Cniq-rWiTIACgyO60Tf/preview" }
-      }
-    },
-    {
       "id": "lucas-mcp-promo",
       "title": "Lucas MCP Promo",
       "category": "tech-promo",
       "date": "2026-05",
       "orientation": "landscape",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1F17Quhyjf2KOHLT_FeLGtqe3pmtPmYFk&sz=w640",
+      "aspect": "16/9",
+      "thumbnail": "/thumbs/lucas-mcp.jpg",
       "sources": {
         "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1F17Quhyjf2KOHLT_FeLGtqe3pmtPmYFk/preview" }
       }
@@ -244,6 +234,18 @@
       "thumbnail": "https://drive.google.com/thumbnail?id=18UKr6DA9E-Se12hrqorRqmgUHdKxRWOL&sz=w640",
       "sources": {
         "en": { "type": "iframe", "url": "https://drive.google.com/file/d/18UKr6DA9E-Se12hrqorRqmgUHdKxRWOL/preview" }
+      }
+    },
+    {
+      "id": "amazon-lucas-mcp-abm",
+      "title": "Amazon Quick with Lucas MCP — Accelerate ABM",
+      "category": "tech-promo",
+      "date": "2026-06",
+      "orientation": "landscape",
+      "aspect": "16/9",
+      "thumbnail": "/thumbs/amazon-quick.jpg",
+      "sources": {
+        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1WrKfpa7CCW8H8Cniq-rWiTIACgyO60Tf/preview" }
       }
     },
     {
