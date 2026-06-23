@@ -4,10 +4,18 @@ export default function VideoCard({ video, category, onOpen }) {
   const ar = getAspect(video);
   const bilingual = Object.keys(video.sources).length > 1;
   const color = category?.color || "#8b5cf6";
+  const external = Boolean(video.externalUrl);
+
+  // External videos (e.g. large personal clips) open straight in a new tab
+  // instead of the in-site player.
+  const Wrapper = external ? "a" : "button";
+  const wrapperProps = external
+    ? { href: video.externalUrl, target: "_blank", rel: "noopener noreferrer" }
+    : { onClick: () => onOpen(video) };
 
   return (
-    <button
-      onClick={() => onOpen(video)}
+    <Wrapper
+      {...wrapperProps}
       className="group mb-5 block w-full break-inside-avoid overflow-hidden rounded-3xl bg-white text-left shadow-[0_8px_30px_rgba(31,18,53,0.08)] ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(31,18,53,0.18)]"
       style={{ borderTop: `4px solid ${color}` }}
     >
@@ -37,7 +45,7 @@ export default function VideoCard({ video, category, onOpen }) {
 
         <div className="absolute inset-0 grid place-items-center">
           <span className="grid h-14 w-14 translate-y-1 place-items-center rounded-full bg-white/90 text-2xl text-ink opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-            ▶
+            {external ? "↗" : "▶"}
           </span>
         </div>
 
@@ -45,6 +53,6 @@ export default function VideoCard({ video, category, onOpen }) {
           {video.title}
         </p>
       </div>
-    </button>
+    </Wrapper>
   );
 }

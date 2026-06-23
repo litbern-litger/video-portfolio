@@ -6,13 +6,55 @@
     "subtitle": "A growing collection of work across L&D, promos, ads, entertainment & personal projects."
   },
   "categories": [
-    { "id": "ld-children", "label": "L&D for Kids", "labelHe": "למידה לילדים", "emoji": "🎨", "color": "#ff5b7f" },
-    { "id": "ld-personalization", "label": "L&D + Personalization", "labelHe": "למידה מותאמת אישית", "emoji": "🧠", "color": "#8b5cf6" },
-    { "id": "ld-explainers", "label": "L&D + Explainers", "labelHe": "הסברים ולמידה", "emoji": "💡", "color": "#f97316" },
-    { "id": "tech-promo", "label": "Promos & Ads", "labelHe": "קידום ופרסום", "emoji": "🚀", "color": "#14b8c4" },
-    { "id": "launched-features", "label": "Launched Features", "labelHe": "פיצ'רים שהושקו", "emoji": "🏆", "color": "#22c55e" },
-    { "id": "entertainment", "label": "Entertainment", "labelHe": "בידור", "emoji": "🎉", "color": "#fbbf24" },
-    { "id": "personal", "label": "Personal Projects", "labelHe": "פרויקטים אישיים", "emoji": "⭐", "color": "#38bdf8" }
+    {
+      "id": "ld-children",
+      "label": "L&D for Kids",
+      "labelHe": "למידה לילדים",
+      "emoji": "🎨",
+      "color": "#ff5b7f"
+    },
+    {
+      "id": "ld-personalization",
+      "label": "L&D + Personalization",
+      "labelHe": "למידה מותאמת אישית",
+      "emoji": "🧠",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "ld-explainers",
+      "label": "L&D + Explainers",
+      "labelHe": "הסברים ולמידה",
+      "emoji": "💡",
+      "color": "#f97316"
+    },
+    {
+      "id": "tech-promo",
+      "label": "Promos & Ads",
+      "labelHe": "קידום ופרסום",
+      "emoji": "🚀",
+      "color": "#14b8c4"
+    },
+    {
+      "id": "launched-features",
+      "label": "Launched Features",
+      "labelHe": "פיצ'רים שהושקו",
+      "emoji": "🏆",
+      "color": "#22c55e"
+    },
+    {
+      "id": "entertainment",
+      "label": "Entertainment",
+      "labelHe": "בידור",
+      "emoji": "🎉",
+      "color": "#fbbf24"
+    },
+    {
+      "id": "personal",
+      "label": "Personal Projects",
+      "labelHe": "פרויקטים אישיים",
+      "emoji": "⭐",
+      "color": "#38bdf8"
+    }
   ],
   "videos": [
     {
@@ -24,7 +66,10 @@
       "aspect": "16/9",
       "thumbnail": "/thumbs/lucas-mcp.jpg",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1F17Quhyjf2KOHLT_FeLGtqe3pmtPmYFk/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/lucas-mcp-promo.mp4"
+        }
       }
     },
     {
@@ -35,7 +80,10 @@
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1Ob2km7i3-IiNV6LpkbJ66Mc0PuhmAxY7&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1Ob2km7i3-IiNV6LpkbJ66Mc0PuhmAxY7/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/filtek-easy-match.mp4"
+        }
       }
     },
     {
@@ -46,7 +94,10 @@
       "orientation": "portrait",
       "thumbnail": "https://drive.google.com/thumbnail?id=1Hzj8pc9UMzq4tDVLxSYsHdRWITzXe8SQ&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1Hzj8pc9UMzq4tDVLxSYsHdRWITzXe8SQ/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/shvil-hatapuzim-1.mp4"
+        }
       }
     },
     {
@@ -57,7 +108,10 @@
       "orientation": "portrait",
       "thumbnail": "https://drive.google.com/thumbnail?id=1bNc7J2JQWBALegTHGUav1CuTHL4GV16y&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1bNc7J2JQWBALegTHGUav1CuTHL4GV16y/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/shvil-hatapuzim-2.mp4"
+        }
       }
     },
     {
@@ -68,7 +122,10 @@
       "orientation": "portrait",
       "thumbnail": "https://drive.google.com/thumbnail?id=16TSSGe9ifRiLtDmQ2trAlrtd358ip8nr&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/16TSSGe9ifRiLtDmQ2trAlrtd358ip8nr/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/shvil-hatapuzim-3.mp4"
+        }
       }
     },
     {
@@ -79,7 +136,10 @@
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1rCsCXHyuv1VCG4eka4giw-OfWcD5d_Zj&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1rCsCXHyuv1VCG4eka4giw-OfWcD5d_Zj/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/what-are-chips-dummies.mp4"
+        }
       }
     },
     {
@@ -91,7 +151,10 @@
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=18Zu92T3oJ71hB5nN5hKCusdF1a7fnTLR&sz=w640",
       "sources": {
-        "he": { "type": "iframe", "url": "https://drive.google.com/file/d/18Zu92T3oJ71hB5nN5hKCusdF1a7fnTLR/preview" }
+        "he": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/chips-first-grade-kids.mp4"
+        }
       }
     },
     {
@@ -102,7 +165,10 @@
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=19p03AJhiTgk5ztsSvi704Aw1_2K8zSHE&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/19p03AJhiTgk5ztsSvi704Aw1_2K8zSHE/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/the-sloth.mp4"
+        }
       }
     },
     {
@@ -114,7 +180,10 @@
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=10imv4pNuYqk27yiiGQXPoOxJsL5FgKlU&sz=w640",
       "sources": {
-        "he": { "type": "iframe", "url": "https://drive.google.com/file/d/10imv4pNuYqk27yiiGQXPoOxJsL5FgKlU/preview" }
+        "he": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/first-grade-heros.mp4"
+        }
       }
     },
     {
@@ -126,7 +195,10 @@
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1HLh4hZJ_8ufZVL6ZTCBFuv5Al-GxfYkU&sz=w640",
       "sources": {
-        "he": { "type": "iframe", "url": "https://drive.google.com/file/d/1HLh4hZJ_8ufZVL6ZTCBFuv5Al-GxfYkU/preview" }
+        "he": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/ai-videos-first-grade.mp4"
+        }
       }
     },
     {
@@ -138,7 +210,10 @@
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1JyC8yEs4Qz0B_vazSxJdyylcPEi0UjWv&sz=w640",
       "sources": {
-        "he": { "type": "iframe", "url": "https://drive.google.com/file/d/1JyC8yEs4Qz0B_vazSxJdyylcPEi0UjWv/preview" }
+        "he": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/welcome-first-laptop.mp4"
+        }
       }
     },
     {
@@ -149,7 +224,10 @@
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1T340Vp6Iincgg8umHOZEgmh0OPxMur8I&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1T340Vp6Iincgg8umHOZEgmh0OPxMur8I/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/brush-your-teeth.mp4"
+        }
       }
     },
     {
@@ -161,7 +239,10 @@
       "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=1nvtMX_2JsctswBnnayItSwKEtG_Rc59R&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1nvtMX_2JsctswBnnayItSwKEtG_Rc59R/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/mighter-ai-ad.mp4"
+        }
       }
     },
     {
@@ -173,7 +254,10 @@
       "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=1knV-6gNLY4xd-ChvwFTKzZUJ2gLBsV7P&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1knV-6gNLY4xd-ChvwFTKzZUJ2gLBsV7P/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/happier-living-therapy.mp4"
+        }
       }
     },
     {
@@ -185,7 +269,10 @@
       "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=1fULEP5PsHF7dsCjxve3j9Lsu10Vux447&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1fULEP5PsHF7dsCjxve3j9Lsu10Vux447/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/happier-living-shopping.mp4"
+        }
       }
     },
     {
@@ -197,7 +284,10 @@
       "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=10CkC0JZGQPbBaGGReqfPnpWSXY7NZm7e&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/10CkC0JZGQPbBaGGReqfPnpWSXY7NZm7e/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/birdie-cx-ad.mp4"
+        }
       }
     },
     {
@@ -209,7 +299,10 @@
       "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=1IMJBqFt3bo7zi3Gy7QZcQNoTbezVRtUs&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1IMJBqFt3bo7zi3Gy7QZcQNoTbezVRtUs/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/tres-finance-ad.mp4"
+        }
       }
     },
     {
@@ -221,7 +314,10 @@
       "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=14vNe87mwPo_I_UE11NLPoJv8VYq-Eapw&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/14vNe87mwPo_I_UE11NLPoJv8VYq-Eapw/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/tres-finance-sst-ad.mp4"
+        }
       }
     },
     {
@@ -233,7 +329,10 @@
       "aspect": "4/5",
       "thumbnail": "https://drive.google.com/thumbnail?id=18UKr6DA9E-Se12hrqorRqmgUHdKxRWOL&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/18UKr6DA9E-Se12hrqorRqmgUHdKxRWOL/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/user-gems-sdr-ad.mp4"
+        }
       }
     },
     {
@@ -245,7 +344,10 @@
       "aspect": "16/9",
       "thumbnail": "/thumbs/amazon-quick.jpg",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1WrKfpa7CCW8H8Cniq-rWiTIACgyO60Tf/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/amazon-lucas-mcp-abm.mp4"
+        }
       }
     },
     {
@@ -256,8 +358,12 @@
       "date": "2026-06",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1dq3tVRZguJqY73aSY872J6a76TKw_7xm&sz=w640",
+      "externalUrl": "https://drive.google.com/file/d/1dq3tVRZguJqY73aSY872J6a76TKw_7xm/view",
       "sources": {
-        "he": { "type": "iframe", "url": "https://drive.google.com/file/d/1dq3tVRZguJqY73aSY872J6a76TKw_7xm/preview" }
+        "he": {
+          "type": "iframe",
+          "url": "https://drive.google.com/file/d/1dq3tVRZguJqY73aSY872J6a76TKw_7xm/preview"
+        }
       }
     },
     {
@@ -268,8 +374,12 @@
       "date": "2023-02",
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=132HBpZvLbs4-cyAuBXT6o7H7BxRw0nGc&sz=w640",
+      "externalUrl": "https://drive.google.com/file/d/132HBpZvLbs4-cyAuBXT6o7H7BxRw0nGc/view",
       "sources": {
-        "he": { "type": "iframe", "url": "https://drive.google.com/file/d/132HBpZvLbs4-cyAuBXT6o7H7BxRw0nGc/preview" }
+        "he": {
+          "type": "iframe",
+          "url": "https://drive.google.com/file/d/132HBpZvLbs4-cyAuBXT6o7H7BxRw0nGc/preview"
+        }
       }
     },
     {
@@ -280,7 +390,10 @@
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=17PtEhYAd4SU9YPpvxqS_lj2rY_tjXunY&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/17PtEhYAd4SU9YPpvxqS_lj2rY_tjXunY/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/brand-dna.mp4"
+        }
       }
     },
     {
@@ -291,7 +404,10 @@
       "orientation": "landscape",
       "thumbnail": "https://drive.google.com/thumbnail?id=1pHUpUcXyMEZkPq9vxy6r95nE-XXavu6i&sz=w640",
       "sources": {
-        "en": { "type": "iframe", "url": "https://drive.google.com/file/d/1pHUpUcXyMEZkPq9vxy6r95nE-XXavu6i/preview" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/video-evaluation.mp4"
+        }
       }
     },
     {
@@ -303,7 +419,10 @@
       "aspect": "16/9",
       "thumbnail": "/thumbs/screen-recording.jpg",
       "sources": {
-        "en": { "type": "mp4", "url": "/videos/screen-recording.mp4" }
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/screen-recording-production.mp4"
+        }
       }
     },
     {
@@ -315,7 +434,10 @@
       "orientation": "portrait",
       "thumbnail": "https://drive.google.com/thumbnail?id=1MJBWNG75tdv6rFJMXoorn37rW4muVj_L&sz=w640",
       "sources": {
-        "he": { "type": "iframe", "url": "https://drive.google.com/file/d/1MJBWNG75tdv6rFJMXoorn37rW4muVj_L/preview" }
+        "he": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/shavuot-kids.mp4"
+        }
       }
     }
   ]
