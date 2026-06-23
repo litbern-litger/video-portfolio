@@ -295,6 +295,18 @@
       }
     },
     {
+      "id": "screen-recording-production",
+      "title": "Screen Recording to Production-Ready Video",
+      "category": "launched-features",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "aspect": "16/9",
+      "thumbnail": "/thumbs/screen-recording.jpg",
+      "sources": {
+        "en": { "type": "mp4", "url": "/videos/screen-recording.mp4" }
+      }
+    },
+    {
       "id": "shavuot-kids",
       "title": "Shavuot — Short Explanation for Kids",
       "titleHe": "מאין חג השבועות לילדים",
