@@ -2,14 +2,15 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Hls from "hls.js";
 import { resolveSource } from "../lib/sources.js";
 
-// Enter fullscreen and rotate the device to match the video orientation.
+// Enter fullscreen. Only landscape videos rotate the device to landscape;
+// portrait videos keep the device upright (no needless rotation).
 function goFullscreen(video, aspect) {
   if (!video) return;
-  const want = aspect >= 1 ? "landscape" : "portrait";
   const lock = () => {
+    if (aspect < 1) return; // portrait video — leave orientation alone
     try {
       if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock(want).catch(() => {});
+        screen.orientation.lock("landscape").catch(() => {});
       }
     } catch {
       /* orientation lock unsupported (e.g. iOS) — native fullscreen rotates on its own */
@@ -69,10 +70,12 @@ export default function Player({
     return () => hls.destroy();
   }, [resolved, isHls, fallback]);
 
-  // Best-effort: open straight into fullscreen, once, on touch devices.
+  // Best-effort: open landscape videos straight into fullscreen (+rotate) once
+  // on touch devices. Portrait videos play inline — no auto-fullscreen/rotation.
   useEffect(() => {
     if (!resolved || resolved.mode !== "video" || fallback) return;
     if (!autoFullscreen || didFullscreen.current) return;
+    if (aspectRef.current < 1) return;
     const video = videoRef.current;
     if (!video) return;
     didFullscreen.current = true;
