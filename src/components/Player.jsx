@@ -83,6 +83,27 @@ export default function Player({
     return () => cancelAnimationFrame(raf);
   }, [resolved, fallback, autoFullscreen]);
 
+  // When the user leaves fullscreen, release any orientation lock so the phone
+  // returns to its normal orientation (makes "back" feel natural).
+  useEffect(() => {
+    const onFsChange = () => {
+      const fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+      if (!fsEl) {
+        try {
+          screen.orientation && screen.orientation.unlock && screen.orientation.unlock();
+        } catch {
+          /* unsupported — ignore */
+        }
+      }
+    };
+    document.addEventListener("fullscreenchange", onFsChange);
+    document.addEventListener("webkitfullscreenchange", onFsChange);
+    return () => {
+      document.removeEventListener("fullscreenchange", onFsChange);
+      document.removeEventListener("webkitfullscreenchange", onFsChange);
+    };
+  }, []);
+
   if (!resolved) return null;
 
   const showIframe = resolved.mode === "iframe" || fallback;
