@@ -139,14 +139,6 @@ export default function Player({
         }}
         onError={() => resolved.fallbackIframe && setFallback(true)}
       />
-      <button
-        type="button"
-        onClick={() => goFullscreen(videoRef.current, aspectRef.current)}
-        aria-label="Fullscreen"
-        className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-sm font-600 text-white backdrop-blur transition hover:bg-black/80"
-      >
-        ⤢ Fullscreen
-      </button>
     </div>
   );
 }
