@@ -99,12 +99,6 @@ export default function VideoModal({ video, category, onClose }) {
             key={`${video.id}-${lang}`}
             source={video.sources[lang]}
             poster={video.thumbnail}
-            aspect={ar}
-            autoFullscreen={
-              typeof window !== "undefined" &&
-              window.matchMedia &&
-              window.matchMedia("(pointer: coarse)").matches
-            }
             onAspect={(r) => {
               if (r > 0.2 && r < 5) setAr(r);
             }}

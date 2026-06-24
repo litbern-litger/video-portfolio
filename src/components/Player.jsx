@@ -2,41 +2,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Hls from "hls.js";
 import { resolveSource } from "../lib/sources.js";
 
-// Enter fullscreen. Only landscape videos rotate the device to landscape;
-// portrait videos keep the device upright (no needless rotation).
-function goFullscreen(video, aspect) {
-  if (!video) return;
-  const lock = () => {
-    if (aspect < 1) return; // portrait video — leave orientation alone
-    try {
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock("landscape").catch(() => {});
-      }
-    } catch {
-      /* orientation lock unsupported (e.g. iOS) — native fullscreen rotates on its own */
-    }
-  };
-
-  if (video.webkitEnterFullscreen && !document.fullscreenEnabled) {
-    video.webkitEnterFullscreen();
-    return;
-  }
-
-  const target = video.closest("[data-fs-target]") || video;
-  const req = target.requestFullscreen || target.webkitRequestFullscreen;
-  if (req) {
-    Promise.resolve(req.call(target)).then(lock).catch(lock);
-  } else if (video.webkitEnterFullscreen) {
-    video.webkitEnterFullscreen();
-  }
-}
-
 export default function Player({
   source,
   poster,
-  aspect = 16 / 9,
   autoPlay = true,
-  autoFullscreen = false,
   onAspect,
 }) {
   const videoRef = useRef(null);
@@ -48,14 +17,8 @@ export default function Player({
     resolved?.mode === "video" &&
     (resolved.kind === "hls" || resolved.url.endsWith(".m3u8"));
 
-  // Keep latest aspect without making it an effect dependency.
-  const aspectRef = useRef(aspect);
-  aspectRef.current = aspect;
-  const didFullscreen = useRef(false);
-
   useEffect(() => {
     setFallback(false);
-    didFullscreen.current = false;
   }, [resolved]);
 
   // HLS needs JS attach where the browser can't play .m3u8 natively.
@@ -69,40 +32,6 @@ export default function Player({
     hls.attachMedia(video);
     return () => hls.destroy();
   }, [resolved, isHls, fallback]);
-
-  // Best-effort: open landscape videos straight into fullscreen (+rotate) once
-  // on touch devices. Portrait videos play inline — no auto-fullscreen/rotation.
-  useEffect(() => {
-    if (!resolved || resolved.mode !== "video" || fallback) return;
-    if (!autoFullscreen || didFullscreen.current) return;
-    if (aspectRef.current < 1) return;
-    const video = videoRef.current;
-    if (!video) return;
-    didFullscreen.current = true;
-    const raf = requestAnimationFrame(() => goFullscreen(video, aspectRef.current));
-    return () => cancelAnimationFrame(raf);
-  }, [resolved, fallback, autoFullscreen]);
-
-  // When the user leaves fullscreen, release any orientation lock so the phone
-  // returns to its normal orientation (makes "back" feel natural).
-  useEffect(() => {
-    const onFsChange = () => {
-      const fsEl = document.fullscreenElement || document.webkitFullscreenElement;
-      if (!fsEl) {
-        try {
-          screen.orientation && screen.orientation.unlock && screen.orientation.unlock();
-        } catch {
-          /* unsupported — ignore */
-        }
-      }
-    };
-    document.addEventListener("fullscreenchange", onFsChange);
-    document.addEventListener("webkitfullscreenchange", onFsChange);
-    return () => {
-      document.removeEventListener("fullscreenchange", onFsChange);
-      document.removeEventListener("webkitfullscreenchange", onFsChange);
-    };
-  }, []);
 
   if (!resolved) return null;
 
