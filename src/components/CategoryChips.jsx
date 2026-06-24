@@ -23,7 +23,7 @@ export default function CategoryChips({ categories, counts, active, onSelect, to
   );
 
   return (
-    <div className="no-scrollbar flex gap-3 overflow-x-auto pb-2">
+    <div className="no-scrollbar flex flex-wrap gap-3 pb-2">
       {chip("all", "All Work", "✨", "#1f1235", total, active === "all")}
       {categories.map((c) =>
         chip(c.id, c.label, c.emoji, c.color, counts[c.id] || 0, active === c.id)
