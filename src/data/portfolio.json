@@ -143,6 +143,21 @@
       }
     },
     {
+      "id": "quantum-for-dummies",
+      "title": "Quantum for Dummies",
+      "category": "ld-explainers",
+      "date": "2026-07",
+      "orientation": "landscape",
+      "aspect": "16/9",
+      "thumbnail": "/thumbs/quantum-for-dummies.jpg",
+      "sources": {
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/quantum-for-dummies.mp4"
+        }
+      }
+    },
+    {
       "id": "chips-first-grade-kids",
       "title": "About Chips for First Grade Kids",
       "titleHe": "מה הוא שבב? לילדים",
