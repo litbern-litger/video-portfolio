@@ -58,6 +58,21 @@
   ],
   "videos": [
     {
+      "id": "about-master-visual",
+      "title": "About Master Visual",
+      "category": "launched-features",
+      "date": "2026-07",
+      "orientation": "landscape",
+      "aspect": "16/9",
+      "thumbnail": "/thumbs/about-master-visual.jpg",
+      "sources": {
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/about-master-visual.mp4"
+        }
+      }
+    },
+    {
       "id": "lucas-mcp-promo",
       "title": "Lucas MCP Promo",
       "category": "tech-promo",
