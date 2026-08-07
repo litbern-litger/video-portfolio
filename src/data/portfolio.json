@@ -58,6 +58,21 @@
   ],
   "videos": [
     {
+      "id": "lucas-v2-behind-the-scenes",
+      "title": "Lucas V2 — The Process Behind the Scenes",
+      "category": "launched-features",
+      "date": "2026-08",
+      "orientation": "landscape",
+      "aspect": "16/9",
+      "thumbnail": "/thumbs/lucas-v2-behind-the-scenes.jpg",
+      "sources": {
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/lucas-v2-behind-the-scenes.mp4"
+        }
+      }
+    },
+    {
       "id": "about-master-visual",
       "title": "About Master Visual",
       "category": "launched-features",
