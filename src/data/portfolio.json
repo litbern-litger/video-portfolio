@@ -58,6 +58,21 @@
   ],
   "videos": [
     {
+      "id": "motif",
+      "title": "Motif",
+      "category": "launched-features",
+      "date": "2026-08",
+      "orientation": "landscape",
+      "aspect": "16/9",
+      "thumbnail": "/thumbs/motif.jpg",
+      "sources": {
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/motif.mp4"
+        }
+      }
+    },
+    {
       "id": "lucas-v2-behind-the-scenes",
       "title": "Lucas V2 — The Process Behind the Scenes",
       "category": "launched-features",
