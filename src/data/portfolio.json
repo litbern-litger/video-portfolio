@@ -138,7 +138,7 @@
       "category": "ld-explainers",
       "date": "2026-05",
       "orientation": "landscape",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1Ob2km7i3-IiNV6LpkbJ66Mc0PuhmAxY7&sz=w640",
+      "thumbnail": "/thumbs/filtek-easy-match.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -152,7 +152,7 @@
       "category": "entertainment",
       "date": "2026-05",
       "orientation": "portrait",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1Hzj8pc9UMzq4tDVLxSYsHdRWITzXe8SQ&sz=w640",
+      "thumbnail": "/thumbs/shvil-hatapuzim-1.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -166,7 +166,7 @@
       "category": "entertainment",
       "date": "2026-05",
       "orientation": "portrait",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1bNc7J2JQWBALegTHGUav1CuTHL4GV16y&sz=w640",
+      "thumbnail": "/thumbs/shvil-hatapuzim-2.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -180,7 +180,7 @@
       "category": "entertainment",
       "date": "2026-05",
       "orientation": "portrait",
-      "thumbnail": "https://drive.google.com/thumbnail?id=16TSSGe9ifRiLtDmQ2trAlrtd358ip8nr&sz=w640",
+      "thumbnail": "/thumbs/shvil-hatapuzim-3.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -194,7 +194,7 @@
       "category": "ld-explainers",
       "date": "2026-05",
       "orientation": "landscape",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1rCsCXHyuv1VCG4eka4giw-OfWcD5d_Zj&sz=w640",
+      "thumbnail": "/thumbs/what-are-chips-dummies.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -238,7 +238,7 @@
       "category": "ld-explainers",
       "date": "2026-06",
       "orientation": "landscape",
-      "thumbnail": "https://drive.google.com/thumbnail?id=19p03AJhiTgk5ztsSvi704Aw1_2K8zSHE&sz=w640",
+      "thumbnail": "/thumbs/the-sloth.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -268,7 +268,7 @@
       "category": "ld-children",
       "date": "2026-06",
       "orientation": "landscape",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1HLh4hZJ_8ufZVL6ZTCBFuv5Al-GxfYkU&sz=w640",
+      "thumbnail": "/thumbs/ai-videos-first-grade.jpg",
       "sources": {
         "he": {
           "type": "mp4",
@@ -297,7 +297,7 @@
       "category": "ld-children",
       "date": "2026-01",
       "orientation": "landscape",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1T340Vp6Iincgg8umHOZEgmh0OPxMur8I&sz=w640",
+      "thumbnail": "/thumbs/brush-your-teeth.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -312,7 +312,7 @@
       "date": "2026-03",
       "orientation": "portrait",
       "aspect": "4/5",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1nvtMX_2JsctswBnnayItSwKEtG_Rc59R&sz=w640",
+      "thumbnail": "/thumbs/mighter-ai-ad.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -327,7 +327,7 @@
       "date": "2026-03",
       "orientation": "portrait",
       "aspect": "4/5",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1knV-6gNLY4xd-ChvwFTKzZUJ2gLBsV7P&sz=w640",
+      "thumbnail": "/thumbs/happier-living-therapy.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -342,7 +342,7 @@
       "date": "2026-03",
       "orientation": "portrait",
       "aspect": "4/5",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1fULEP5PsHF7dsCjxve3j9Lsu10Vux447&sz=w640",
+      "thumbnail": "/thumbs/happier-living-shopping.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -357,7 +357,7 @@
       "date": "2026-03",
       "orientation": "portrait",
       "aspect": "4/5",
-      "thumbnail": "https://drive.google.com/thumbnail?id=10CkC0JZGQPbBaGGReqfPnpWSXY7NZm7e&sz=w640",
+      "thumbnail": "/thumbs/birdie-cx-ad.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -387,7 +387,7 @@
       "date": "2026-05",
       "orientation": "portrait",
       "aspect": "4/5",
-      "thumbnail": "https://drive.google.com/thumbnail?id=14vNe87mwPo_I_UE11NLPoJv8VYq-Eapw&sz=w640",
+      "thumbnail": "/thumbs/tres-finance-sst-ad.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -402,7 +402,7 @@
       "date": "2026-05",
       "orientation": "portrait",
       "aspect": "4/5",
-      "thumbnail": "https://drive.google.com/thumbnail?id=18UKr6DA9E-Se12hrqorRqmgUHdKxRWOL&sz=w640",
+      "thumbnail": "/thumbs/user-gems-sdr-ad.jpg",
       "sources": {
         "en": {
           "type": "mp4",
@@ -432,7 +432,7 @@
       "category": "personal",
       "date": "2026-06",
       "orientation": "landscape",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1dq3tVRZguJqY73aSY872J6a76TKw_7xm&sz=w640",
+      "thumbnail": "/thumbs/maya-bat-shesh.jpg",
       "externalUrl": "https://drive.google.com/file/d/1dq3tVRZguJqY73aSY872J6a76TKw_7xm/view",
       "sources": {
         "he": {
@@ -448,7 +448,7 @@
       "category": "personal",
       "date": "2023-02",
       "orientation": "landscape",
-      "thumbnail": "https://drive.google.com/thumbnail?id=132HBpZvLbs4-cyAuBXT6o7H7BxRw0nGc&sz=w640",
+      "thumbnail": "/thumbs/lenny-bat-shalosh.jpg",
       "externalUrl": "https://drive.google.com/file/d/132HBpZvLbs4-cyAuBXT6o7H7BxRw0nGc/view",
       "sources": {
         "he": {
@@ -507,7 +507,7 @@
       "category": "ld-children",
       "date": "2026-05",
       "orientation": "portrait",
-      "thumbnail": "https://drive.google.com/thumbnail?id=1MJBWNG75tdv6rFJMXoorn37rW4muVj_L&sz=w640",
+      "thumbnail": "/thumbs/shavuot-kids.jpg",
       "sources": {
         "he": {
           "type": "mp4",
