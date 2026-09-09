@@ -58,6 +58,21 @@
   ],
   "videos": [
     {
+      "id": "actor-feature",
+      "title": "Actor Feature",
+      "category": "launched-features",
+      "date": "2026-09",
+      "orientation": "landscape",
+      "aspect": "16/9",
+      "thumbnail": "/thumbs/actor-feature.jpg",
+      "sources": {
+        "en": {
+          "type": "mp4",
+          "url": "https://s3.us-east-1.amazonaws.com/oddity.idmadm.com/Lital/portfolio/actor-feature.mp4"
+        }
+      }
+    },
+    {
       "id": "motif",
       "title": "Motif",
       "category": "launched-features",
